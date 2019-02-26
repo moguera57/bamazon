@@ -7,7 +7,7 @@ var connection = mysql.createConnection({
 
   port: 3306,
 
-  user: process.env.USER,
+  user: 'root',
 
   password: process.env.DB_PASS,
   database: process.env.DB
@@ -23,7 +23,7 @@ function start() {
     .prompt({
       name: "choice",
       type: "list",
-      message: "Would you like to [POST] an auction or [BID] on an auction?",
+      message: "Would you like to buy?",
       choices: ["Buy", "EXIT"]
     })
     .then(function(answer) {
